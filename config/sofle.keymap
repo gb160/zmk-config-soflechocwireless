@@ -78,7 +78,7 @@
             wait-ms = <40>;
             tap-ms = <40>;
             bindings = <
-                &kp A &kp B &kp C &kp D &kp E
+                &kp P &kp O &kp L &kp O &kp P
                 &kp RET
             >;
         };
