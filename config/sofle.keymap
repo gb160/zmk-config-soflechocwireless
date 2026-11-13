@@ -67,6 +67,23 @@
 /* END temporary RGB support section */
 
 
+
+
+/ {
+    macros {
+        hello_macro: pswd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "pswd";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = <&kp p &kp o &kp l &kp o &kp p>;
+        };
+    };
+};
+
+
+
 / {
     behaviors {
         rgb_encoder: rgb_encoder {
