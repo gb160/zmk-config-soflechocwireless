@@ -71,20 +71,19 @@
 
 / {
     macros {
-        pswd-macro: pswd {
+        pswd: pswd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             display-name = "pswd";
             wait-ms = <40>;
             tap-ms = <40>;
             bindings = <
-                &kp P &kp O &kp L &kp O &kp P
+                &kp A &kp B &kp C &kp D &kp E
                 &kp RET
             >;
         };
     };
 };
-
 
 
 / {
