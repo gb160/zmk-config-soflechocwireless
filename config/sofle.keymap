@@ -75,8 +75,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             display-name = "pswd";
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings = <
                 &kp P &kp O &kp L &kp O &kp P
                 &kp RET
