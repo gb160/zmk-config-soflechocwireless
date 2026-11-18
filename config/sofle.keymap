@@ -184,7 +184,7 @@
             #binding-cells = <0>;
             display-name = "Tab Group Up Dance";
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <150>;
 
             bindings =
                 <&kp UP>,
@@ -196,7 +196,7 @@
             #binding-cells = <0>;
             display-name = "Tab Group Down Dance";
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <150>;
 
             bindings =
                 <&kp DOWN>,
