@@ -265,3 +265,6 @@
         };
     };
 };
+
+// Trigger ZMK rebuild
+
