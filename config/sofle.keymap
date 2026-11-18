@@ -112,6 +112,35 @@
                 , <&macro_release &kp LALT &kp LGUI>
                 ;
         };
+
+
+        tabgroup_up: tabgroup_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "macro_tabgroup_up";
+            wait-ms = <40>;
+            tap-ms = <40>;
+
+            bindings
+                = <&macro_press &kp LALT &kp LGUI>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LALT &kp LGUI>
+                ;
+        };
+
+        tabgroup_down: tabgroup_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "macro_tabgroup_down";
+            wait-ms = <40>;
+            tap-ms = <40>;
+
+            bindings
+                = <&macro_press &kp LALT &kp LGUI>
+                , <&macro_tap &kp DOWN>
+                , <&macro_release &kp LALT &kp LGUI>
+                ;
+        };
     };
 };
 
@@ -127,6 +156,54 @@
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_HUI>;
         };
+
+        tabgroup_up_hold: tabgroup_up_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            display-name = "Tab Group Up Hold";
+
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+
+            bindings = <&tabgroup_up>, <&kp>;
+        };
+
+        tabgroup_down_hold: tabgroup_down_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            display-name = "Tab Group Down Hold";
+
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+
+            bindings = <&tabgroup_down>, <&kp>;
+        };
+
+        tabgroup_up_td: tabgroup_up_td {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            display-name = "Tab Group Up Dance";
+
+            tapping-term-ms = <250>;
+
+            bindings =
+                <&kp UP>,
+                <&tabgroup_up_hold 0 UP>;
+        };
+
+        tabgroup_down_td: tabgroup_down_td {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            display-name = "Tab Group Down Dance";
+
+            tapping-term-ms = <250>;
+
+            bindings =
+                <&kp DOWN>,
+                <&tabgroup_down_hold 0 DOWN>;
+        };
+
+
     };
 
     keymap {
